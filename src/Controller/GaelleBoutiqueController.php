@@ -8,12 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class GaelleBoutiqueController extends AbstractController
 {
-    #[Route('/boutique', name: 'boutique')]
+    #[Route('/', name: 'boutique')]
     public function index(): JsonResponse
     {
+        $user="alain";
         return $this->json([
             'message' => 'Welcome to your new controller!',
             'path' => 'src/Controller/GaelleBoutiqueController.php',
+            'user'=> $user
         ]);
     }
 }
